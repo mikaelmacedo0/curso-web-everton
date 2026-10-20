@@ -33,7 +33,6 @@
          } else {
 -  //se a URL não corresponder a nenhuma das rotas definidas, retorna um erro 404
 
-        //se a URL não corresponder a nenhuma das rotas definidas, retorna um erro 404
         reposta.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
         reposta.end('Erro 404: Página não encontrada');
        }
