@@ -28,3 +28,9 @@
         reposta.end('Erro 404: Página não encontrada');
     }
 });
+
+
+const PORTA = 3000;
+meurServidor.listen(PORTA, function() {
+    console.log(`Servidor rodando em http://localhost:${PORTA}`);
+});
