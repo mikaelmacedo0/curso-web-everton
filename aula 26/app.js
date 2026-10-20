@@ -29,8 +29,10 @@
     }
 });
 
-
+//definindo a porta em que o servidor irá escutar as requisições
 const PORTA = 3000;
-meurServidor.listen(PORTA, function() {
-    console.log(`Servidor rodando em http://localhost:${PORTA}`);
-});
+    //iniciando o servidor e exibindo uma mensagem no console quando estiver pronto
+    meurServidor.listen(PORTA, function() {
+        //exibindo a mensagem no console indicando que o servidor está rodando e em qual URL ele pode ser acessado
+        console.log(`Servidor rodando em http://localhost:${PORTA}`);
+    });
