@@ -12,13 +12,15 @@
     <div class="container">
         <div class="cadastro">
             <h1>Cadastro Usuário</h1>
-            <label for="nome"></label>
-            <input type="text" id="nome" name="nome" placeholder="Nome Completo">
+            <form id="formulario">
+                <label for="nome"></label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
 
-            <label for="cargo"></label>
-            <input type="text" id="cargo" name="cargo" placeholder="Cargo ou função">
+                <label for="cargo"></label>
+                <input type="text" id="cargo" name="cargo" placeholder="Cargo ou função" required>
 
-            <button id='cadastrar' type="button">Salvar no Sistema</button>
+                <button type="submit">Salvar no Sistema</button>
+            </form>
         </div>
     </div>
 
