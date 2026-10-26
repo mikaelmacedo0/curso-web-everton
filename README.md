@@ -37,3 +37,19 @@
         reposta.end('Erro 404: Página não encontrada');
        }
        });
+
+   # Aula 28 - Criando a conexão entre Frontedn e Backend
+
+  Fetch
+
+    - localhost:3000
+    - Header
+    - Body - passa os dados no formato especificado
+    
+   Then
+
+    - Faz o tratamento dos dados de acordo com o formato
+ 
+   Catch
+
+    - Analisa e responde em caso de erros
