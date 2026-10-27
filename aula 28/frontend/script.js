@@ -41,3 +41,45 @@ formulario.addEventListener('submit', function (event) {
             alert('Erro: Não foi possível conectar ao servidor backend.');
         });
 });
+
+
+async function carregarDados() {
+  try {
+    // 1. Faz a requisição para o endpoint do backend
+    const resposta = await fetch('http://localhost:3000/usuarios');
+    
+    // 2. Converte a resposta recebida para JSON
+    const dados = await resposta.json();
+    
+    // 3. Usa os dados no frontend (ex: exibir no console ou manipular o HTML)
+    console.log(dados);
+    renderizarNaTela(dados);
+  } catch (erro) {
+    console.error('Erro ao buscar dados:', erro);
+  }
+}
+
+function renderizarNaTela(usuarios) {
+  const listaElemento = document.getElementById('usuariosCadastrados');
+  listaElemento.innerHTML = '';
+
+  usuarios.forEach(usuario => {
+    const li = document.createElement('li');
+    li.textContent = usuario.nome+" "+usuario.cargo;
+    listaElemento.appendChild(li);
+  });
+}
+
+// Chamar a função para carregar ao abrir a página
+carregarDados();
+
+const excluir = document.getElementById('excluir')
+excluir.addEventListener('click', function apagarNaTela(usuarios){
+    const listaElemento = document.getElementById('usuariosCadastrados');
+    listaElemento.innerHTML = '';
+
+    usuarios.forEach(usuario => {
+        listaElemento.removeChild(usuario.nome, usuario.cargo)
+    })
+
+})
