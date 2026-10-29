@@ -23,3 +23,15 @@
         margin-bottom: 5px;
     }
 }
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li {
+    display: list-item;
+    background-color: rgb(179, 225, 209);
+    border-left: rgb(81, 81, 255) solid 4px;
+    border-radius: 4px;
+}
