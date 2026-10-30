@@ -49,7 +49,10 @@
    Then
 
     - Faz o tratamento dos dados de acordo com o formato
- 
+
    Catch
 
     - Analisa e responde em caso de erros
+
+ # Aula 28 - Criando banco de dados MongoDB
+    - instala no mesmo diretório do JSonPackages - npm install mongoose dotenv
